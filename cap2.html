@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href=""> <!-- fontes -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Parte 2</title>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;  
+  }
+  html {
+    background-image: url('img/back1.jpeg');
+    color: #ffffff;
+    min-height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+  }
+  body{
+    margin: 25px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circulo{
+    display: inline-flex;
+    font-size: 40px;
+    color: yellow;
+    
+  }
+  #topo{
+    display: block;
+    float: right;
+  }
+  #player{
+    display:none;
+  }
+  header #data_gif{
+    width: 350px;
+  }
+  header .celebracao_img {
+    width: 360px;
+  }
+  header .div_cat_gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  header .cat_gif {
+    width: 230px;
+    
+  }
+  .titulo {
+    display: inline-flex;
+    font-size: 40px;
+    font-family: "Grey Qo", cursive;
+  }
+  .letras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main p {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: justify;
+  }
+  #img1, #img2, #img3, #img5, #img6, #img7 {
+    width: 85%;
+    border: 3px solid #34ce82;  
+  }
+  #img5 {
+    border: 3px solid #00a910;
+  }
+  #img6 {
+    border: 3px solid #f880ff
+  }
+  #img7{
+    border: 3px solid #a95b38
+  }
+  .seta {
+    width: 100px;
+    display: flex;
+    float: right;
+    transform: rotate(-90deg);
+    z-index: -1;
+  }
+</style>
+<body>
+  <header>
+    
+    <a href="cap1.html"><div class="circulo"><--</div></a>
+    <a href="cap3.html"><div id="topo" class="circulo">--></div></a>
+    <img class="celebracao_img" src="img/celebracao.png" alt="">
+    <br>
+    <div class="letras">
+      <div class="titulo" style="color:#FF0A00">Mu</div>
+      <div class="titulo" style="color:#FFE715">ito&nbsp</div>
+      <div class="titulo" style="color:#6EFA15">Am</div>
+      <div class="titulo" style="color:#3FFAF0">or&nbsp</div>
+      <div class="titulo" style="color:#53D1FA"> &nbspe&nbsp </div>
+      <div class="titulo" style="color:#15C4FA">ale</div>
+      <div class="titulo" style="color:#5915F1">gria</div>
+    </div>
+    <div class="div_cat_gif">
+    <img class="cat_gif" src="gifs/cat.gif" alt="">
+    </div>
+  </header>
+  <main>
+    <audio id="player" autoplay="autoplay" controls="controls">
+	   <source src="musicas/bagunceira.m4a" type="audio/mp3" />
+    </audio>
+    <p style="color:#6015F2">
+    </p>
+    <p style="color:#FFFF66">
+    </p>
+    <img id="img1" src="img/img1.jpg" alt="">
+    <p style="color:#FF2266">
+    </p>
+    <p style="color:#ff7300">
+    </p>
+    <img id="img2" src="img/img2.jpeg" alt="">
+    <p style="color:#ff6ad2">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+    <img id="img5" src="img/img5.jpg" alt="">
+    <p style="color:#00FF00">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+    <img id="img6" src="img/img6.jpg" alt="">
+    <p style="color:#00FF00">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+    <img id="img7" src="img/img7.jpg" alt="">
+    <p style="color:#00FF00">
+    </p>
+    <p style="color:#00FF00">
+    </p>
+
+
+
+  </main> 
+  <footer>
+    <span id="text_foot"></span>
+    <a href="#topo">
+    <img class="seta" align="right" src="gifs/seta.gif" alt="">
+    </a>
+  </footer>
+</body>
+<script>
+  let html = document.querySelector('html');
+  let play = document.querySelector('#player');
+  html.addEventListener('click', () => {
+    play.play();
+  });
+</script>
+</html>
