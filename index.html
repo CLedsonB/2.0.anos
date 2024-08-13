@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href=""> <!-- fontes -->
   <link rel="stylesheet" href="./style.css">
-  <title>Presenta da Tai 2.0</title>
+  <title>Presente para o nosso amor</title>
 </head>
 <style>
   * {
@@ -16,8 +16,10 @@
   border: none;  
   }
   html {
-    background: #000;
+    background-image: url('img/back3.jpeg');
     color: #ffffff;
+    min-height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
   }
   body{
     margin: 25px;
@@ -27,14 +29,8 @@
     justify-content: center;
     align-items: center;
   }
-  .circulo{
-    display: inline-flex;
-    font-size: 40px;
-    color: yellow;
-    
-  }
-  header .celebracao_img {
-    width: 350px;
+  #player{
+    display:none;
   }
   header .div_cat_gif{
     display: flex;
@@ -43,99 +39,85 @@
   }
   header .cat_gif {
     width: 230px;
-    
+    margin-top: 170px;   
   }
-  .titulo {
-    display: inline-flex;
-    
-    font-size: 40px;
+  #text{
+    font-size: 18px;
+    text-align: center;
   }
-  .letras {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main p {
-    font-size: 24px;
-    margin: 10px 0;
-  }
-  .seta {
-    width: 100px;
+  #img{
+    width: 260px;
   }
 </style>
 <body>
   <header>
-    <a href=""><div class="circulo"><--</div></a>
-    <a href=""><div class="circulo">--></div></a>
-    <img class="celebracao_img" src="img/celebracao.png" alt="">
-    <br>
-    <div class="letras">
-      <div class="titulo" style="color:#FF0A00">2</div>
-      <div class="titulo" style="color:#FFE715">.</div>
-      <div class="titulo" style="color:#6EFA15">0</div>
-      <div class="titulo" style="color:#3FFAF0">A</div>
-      <div class="titulo" style="color:#53D1FA">n</div>
-      <div class="titulo" style="color:#15C4FA">o</div>
-      <div class="titulo" style="color:#5915F1">s</div>
+    <div id="surpresa">
+    <p id="text"></p>
+    <img id="img" src="" alt="">   
     </div>
     <div class="div_cat_gif">
-    <img class="cat_gif" src="gifs/cat-cute.gif" alt="">
+    <img class="cat_gif" src="img/Pfechado.png" alt="">
     </div>
+    <h2 class="h2">⬆️⬆️⬆️</h2>
+    <svg>
+      <text class="h2" x="0" y="30px" font-size="28px" style="fill: white; stroke: black; stroke-width: 1px">
+       Toque para abrir
+      </text>
+    </svg>
+    <h2 class="h2"></h2>
   </header>
   <main>
     <audio id="player" autoplay="autoplay" controls="controls">
-	   <source src="musicas/sorvete.m4a" type="audio/mp3" />
+	   <source src="musicas/let_go.mp3" type="audio/mp3" />
     </audio>
-    <p style="color:#6015F2">
-    Para o meu querido amor, 
-    meus mais sinceros sentimentos. 
-    Que nesse dia especial não nos falte amor 
-    e compreensão para seguimos firme 
-    nessa jornada de descobrimentos, 
-    superação e aprendizagem.  
-    </p>
-    <p style="color:#FFFF66">
-    A vida nos deu a sorte de se encontrar 
-    e não vamos deixar passar a chance de ser feliz.
-    Muito me perguntam donde vem esse amor por ti, são tantos os motivos que 
-    não caberiam aqui mas como eu 
-    sou teimoso: 
-    </p>
-    <p style="color:#FF2266">
-    Viajo em você dormindo, tão fofa, 
-    tão linda, sou tão apaixonado em você 
-    que eu te traria todas as estrelas do céu 
-    para iluminar a sua noite.
-    </p>
-    <p style="color:#00FF00">
-      Sua teimosia é seu charme, sua audácia 
-      e determinação para me desobedecer 
-      só me mostram o quão importante sou 
-      para você.
-    </p>
-    <p style="color:#">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-Seu sorriso me encanta e derrete 
-meu coração, me perco nos brilhos 
-do seu olhos.
-Cada mordida e carícia me confortam, 
-e sem dúvida eu 
-não trocaria essa intimidade por nada.
-Eu posso contar contigo em todos os 
-momentos e sua confiança em mim, 
-me agrada muito e eu não trocaria essa 
-lealdade por nada.
   </main> 
   <footer>
-    <img class="seta" src="gifs/seta.gif" alt="">
-    <!-- retornar ao topo animado-->
   </footer>
-  <!-- fundo escuro, baseado naquele site de ano novo -->
 </body>
+<script>
+  let html = document.querySelector('html');
+  let play = document.querySelector('#player');
+  html.addEventListener('click', () => {
+    play.play();
+  });
+  
+  let presente = document.querySelector('.cat_gif');
+  
+  presente.addEventListener('click', () => {
+    presente.src = 'img/Paberto.png';
+    presente.setAttribute('style', 'margin-top: 20px');
+    
+    let text = document.querySelector('#text');
+    let img = document.querySelector("#img");
+    const h2 = document.querySelectorAll('.h2');
+    let i = 20;
+    var contador = 0;
+    
+    text.textContent = "Te amo Taii ❤️"; 
+    const tag = document.createElement('p');
+    tag.innerHTML = `Vim te informa que hoje é um dia 
+    muito especial e apesar de eu não está presente, saiba que o 
+    meu amor por você supera qualquer distância`;
+    text.appendChild(tag);
+    
+    img.src = "gifs/cor1.gif"
+    h2.forEach(element => {
+      element.textContent = " ";
+    });
+    setTimeout(redirecionar, 24000);
+    const time = setInterval(aguarde, 1000, 24);
+        
+    function aguarde(seg){
+      contador++;
+      h2[1].textContent = "Aguarde "+(seg-contador)+" segundos...";
+      if(seg < 1){
+        clearTimeout(time);
+      }
+      }
+    });
+  function redirecionar() {
+    
+    window.location.href='cap1.html';
+  }
+</script>
 </html>
