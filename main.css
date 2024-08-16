@@ -68,15 +68,15 @@
     text-align: justify;
     font-family: "Barlow";
   }
-  #img4, #img5, #img2 {
+  #img1, #img2, #img3 {
     width: 85%;
-    border: 2px solid #a42bff;  
+    border: 2px solid #FFFF66;  
   }
   #img2 {
-    border: 2px solid #ff6aa9
+    border: 2px solid #ff2266;
   }
-  #img5 {
-    border: 2px solid #ffe715;
+  #img3 {
+    border: 2px solid #ff7300;
   }
   .seta {
     width: 100px;

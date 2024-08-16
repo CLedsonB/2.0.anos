@@ -1,0 +1,148 @@
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;  
+  }
+  html {
+    background-image: url('img/back1.webp');
+    color: #ffffff;
+    min-height: 100%;
+    box-shadow: 0 0 300px rgba(0,0,0,0.9) inset;
+  }
+  body{
+    margin: 25px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circulo{
+    display: inline-flex;
+    font-size: 40px;
+    color: yellow;
+    
+  }
+  #topo{
+    display: block;
+    float: right;
+  }
+  #player{
+    display:none;
+  }
+  header #data_gif{
+    width: 350px;
+  }
+  header .celebracao_img {
+    width: 360px;
+  }
+  header .div_cat_gif{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  header .cat_gif {
+    width: 230px;
+    
+  }
+  .titulo {
+    display: inline-flex;
+    font-size: 40px;
+    font-family: "Grey Qo", cursive;
+  }
+  .letras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main p {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: justify;
+    font-weight: bold;
+  }
+  #insta {
+    background-color: #000;
+    margin: 30px 0;
+    height: 450px;
+  }
+  #perfil{
+    display: flex;
+  }
+  
+  #fotoperfil{
+    width: 40px;
+    margin: 20px 10px;
+    border-radius:50%;
+    border: 3px solid #FF892B;
+  }
+  #nomeusuario{
+    display: block;
+    font-size: 14px;
+    margin-top: 28px;
+  }
+  #local {
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+  aside{
+    font-size: 22px;
+    font-weight: bold;
+    transform: rotate(90deg);
+    float: right;
+    margin-left: 140px;
+  }
+  #fotos{
+    display: flex;
+    align-items: center;
+    height: 310px;
+  }
+  #num_post{
+    position: relative;
+    float: right;
+    top: 5px;
+    left: -25px;
+    padding: 5px;
+    border-radius: 40%;
+    background-color: #90908496;
+  }
+  #post {
+    width: 330px;
+  }
+  
+  .b_insta{
+     position: absolute;
+     font-size: 50px;
+     color: #ff95d2;
+     }
+  #b_dir{
+    float: right;
+    margin-left: 310px;
+  }
+  #bar{
+    margin-top: 15px;
+    width: 190px;
+  }
+  #img1, #img2, #img3, #img5, #img6, #img7 {
+    width: 85%;
+    border: 3px solid #34ce82;  
+  }
+  #img5 {
+    border: 3px solid #00a910;
+  }
+  #img6 {
+    border: 3px solid #f880ff
+  }
+  #img7{
+    border: 3px solid #a95b38
+  }
+  .seta {
+    width: 100px;
+    display: flex;
+    float: right;
+    transform: rotate(-90deg);
+    z-index: -1;
+  }

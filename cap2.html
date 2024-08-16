@@ -4,95 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="stylesheet" href=""> <!-- fontes -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="main2.css">
   <title>Parte 2</title>
 </head>
-<style>
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;  
-  }
-  html {
-    background-image: url('img/back1.jpeg');
-    color: #ffffff;
-    min-height: 100%;
-    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
-  }
-  body{
-    margin: 25px;
-  }
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .circulo{
-    display: inline-flex;
-    font-size: 40px;
-    color: yellow;
-    
-  }
-  #topo{
-    display: block;
-    float: right;
-  }
-  #player{
-    display:none;
-  }
-  header #data_gif{
-    width: 350px;
-  }
-  header .celebracao_img {
-    width: 360px;
-  }
-  header .div_cat_gif{
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-  }
-  header .cat_gif {
-    width: 230px;
-    
-  }
-  .titulo {
-    display: inline-flex;
-    font-size: 40px;
-    font-family: "Grey Qo", cursive;
-  }
-  .letras {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main p {
-    font-size: 22px;
-    margin: 10px 0;
-    text-align: justify;
-  }
-  #img1, #img2, #img3, #img5, #img6, #img7 {
-    width: 85%;
-    border: 3px solid #34ce82;  
-  }
-  #img5 {
-    border: 3px solid #00a910;
-  }
-  #img6 {
-    border: 3px solid #f880ff
-  }
-  #img7{
-    border: 3px solid #a95b38
-  }
-  .seta {
-    width: 100px;
-    display: flex;
-    float: right;
-    transform: rotate(-90deg);
-    z-index: -1;
-  }
-</style>
 <body>
   <header>
     
@@ -117,42 +31,29 @@
     <audio id="player" autoplay="autoplay" controls="controls">
 	   <source src="musicas/bagunceira.m4a" type="audio/mp3" />
     </audio>
-    <p style="color:#6015F2">
-    </p>
-    <p style="color:#FFFF66">
-    </p>
-    <img id="img1" src="img/img1.jpg" alt="">
-    <p style="color:#FF2266">
-    </p>
-    <p style="color:#ff7300">
-    </p>
-    <img id="img2" src="img/img2.jpeg" alt="">
-    <p style="color:#ff6ad2">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <img id="img5" src="img/img5.jpg" alt="">
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <img id="img6" src="img/img6.jpg" alt="">
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
-    <img id="img7" src="img/img7.jpg" alt="">
-    <p style="color:#00FF00">
-    </p>
-    <p style="color:#00FF00">
-    </p>
+    <div id="insta">
+      <div id="perfil">
+        <img id="fotoperfil" src="img/imgperfil.jpg" alt="">
+        <p id="nomeusuario">
+          Tai.gatinha<br><span id="local">Em paz</span>
+          <aside>...</aside>
+        </p>
+      </div>
+      <span id="num_post">1/8</span>
+      <div id="fotos">
+        <p class="b_insta" id="b_esq"><</p>
+        <img id="post" src="memes/img1.jpg" alt="">
+        <p class="b_insta" id="b_dir">></p>
+      </div>
+      <img id="bar" src="memes/bar.jpg" alt="">
+    </div>
 
-
-
+    <img id="img1" src="img/img4.webp" alt="">
+    <img id="img2" src="img/img5.webp" alt="">
+    <img id="img5" src="img/img6.webp" alt="">
+    <img id="img6" src="img/img7.webp" alt="">
+    <img id="img7" src="img/img8.webp" alt="">
+    
   </main> 
   <footer>
     <span id="text_foot"></span>
@@ -164,8 +65,30 @@
 <script>
   let html = document.querySelector('html');
   let play = document.querySelector('#player');
+  let be = document.querySelector('#b_esq');
+  let bd = document.querySelector('#b_dir');
+  let img = document.querySelector('#post');
+  let id = document.querySelector('#num_post');
+  let cont = 1;
+  
   html.addEventListener('click', () => {
     play.play();
+  });
+  bd.addEventListener('click', () => {
+    if(cont > 7){
+      cont = 7;
+    }
+    cont++;
+    id.textContent = `${cont}/8`;
+    img.src = `memes/img${cont}.jpg`;  
+  });
+  be.addEventListener('click', () => {
+    if(cont < 2){
+      cont = 2;
+    }
+    cont--;
+    id.textContent = `${cont}/8`;
+    img.src = `memes/img${cont}.jpg`;
   });
 </script>
 </html>
